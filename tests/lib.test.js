@@ -27,8 +27,16 @@ describe('greet', () => {
 
 describe("getCurrencies", () => {
   it("should contain a given or list of currency", () => {
-    const result = lib.getCurrencies();
-
+      const result = lib.getCurrencies();
+ 
     expect(result).toEqual(expect.arrayContaining(["AUD"]));
   });
+});
+
+describe("getProduct", () => {
+    it("should return the object id", () => {
+        const result = lib.getProduct(1);
+
+        expect(result).toMatchObject({ id: 1, price: 10 })
+    })
 });
