@@ -3,7 +3,7 @@ const mail = require('./mail');
 
 // Testing numbers 
 module.exports.absolute = function(number) {
-  return number >= 0 ? number: -number
+  return (number >= 0) ? number : -number;
 }
 
 // Testing strings 

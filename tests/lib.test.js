@@ -16,3 +16,11 @@ describe('absolute', () => {
       expect(result).toBe(0);
     });
 })
+
+describe('greet', () => {
+    it('should return greeting message', () => {
+        let result = lib.greet('Oluyemi');
+        
+        expect(result).toMatch(/Oluyemi/)
+    })
+})
