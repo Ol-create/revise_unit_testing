@@ -49,9 +49,7 @@ describe("registerUser", () => {
             expect(() => {
               lib.registerUser(a);
             }).toThrow();
-        })
-
-        
+        }) 
     })
 
     it("should return user obj if username is defined", () => {

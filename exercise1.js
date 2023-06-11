@@ -14,3 +14,4 @@ module.exports.fizzBuzz = function(input) {
 
   return input; 
 }
+
