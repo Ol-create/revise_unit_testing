@@ -21,6 +21,6 @@ describe('greet', () => {
     it('should return greeting message', () => {
         let result = lib.greet('Oluyemi');
         
-        expect(result).toMatch(/Oluyemi/)
+        expect(result).toContain('Oluyemi')
     })
 })
