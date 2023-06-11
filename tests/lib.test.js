@@ -24,3 +24,11 @@ describe('greet', () => {
         expect(result).toContain('Oluyemi')
     })
 })
+
+describe("getCurrencies", () => {
+  it("should contain a given or list of currency", () => {
+    const result = lib.getCurrencies();
+
+    expect(result).toEqual(expect.arrayContaining(["AUD"]));
+  });
+});
