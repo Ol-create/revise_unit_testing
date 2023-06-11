@@ -40,3 +40,24 @@ describe("getProduct", () => {
         expect(result).toMatchObject({ id: 1, price: 10 })
     })
 });
+
+describe("registerUser", () => {
+    it("should throw expection user is undefined", () => {
+        const arg = [null, undefined, NaN, 0, '', false];
+
+        arg.forEach( a => {
+            expect(() => {
+              lib.registerUser(a);
+            }).toThrow();
+        })
+
+        
+    })
+
+    it("should return user obj if username is defined", () => {
+      const result = lib.registerUser("Dr. Oluyemi");
+
+        expect(result).toMatchObject({ username: 'Dr. Oluyemi' });
+        expect(result.id).toBeGreaterThan(0)
+    });
+});
