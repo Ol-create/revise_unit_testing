@@ -34,6 +34,9 @@ module.exports.applyDiscount = function(order) {
 
   if (customer.points > 10) 
     order.totalPrice *= 0.9; 
+  
+  // Add my little tip
+  return order
 }
 
 // Mock functions 
